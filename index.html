@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebRTC with Signaling Server</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WebRTC Chat</h1>
+        <div class="input-section">
+            <input type="text" id="usernameInput" placeholder="Enter your username" />
+            <input type="text" id="roomIdInput" placeholder="Enter room ID" />
+            <button id="joinButton">Join Room</button>
+        </div>
+        <div class="input-section">
+            <input type="text" id="messageInput" placeholder="Enter your message" disabled />
+            <button id="sendButton" disabled>Send</button>
+        </div>
+        <div id="messages"></div>
+        <div class="videos">
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+        </div>
+        <div class="input-section">
+            <input type="file" id="fileInput" disabled />
+            <button id="sendFileButton" disabled>Send File</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

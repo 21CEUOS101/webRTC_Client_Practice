@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Container for all elements */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements horizontally */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center container horizontally */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Fields and Buttons Section */
+.input-section {
+  display: flex; /* Arrange inputs and buttons horizontally */
+  justify-content: space-between; /* Distribute space evenly between elements */
+  width: 100%;
+  margin-bottom: 10px; /* Add spacing below */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="file"] {
+  flex: 1; /* Inputs take up available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  font-weight: bold; /* Bold text for input fields */
+  margin-right: 10px; /* Add space between input and button */
+}
+
+input[type="text"]::placeholder,
+input[type="file"]::placeholder {
+  color: #999;
+}
+
+/* Buttons */
+button {
+  background-color: #333; /* Dark gray background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold; /* Bold text for buttons */
+}
+
+button:disabled {
+  background-color: #ddd; /* Light gray for disabled buttons */
+  cursor: default;
+}
+
+button:hover:not(:disabled) {
+  background-color: #222; /* Darker gray on hover */
+}
+
+/* Chat Messages Area */
+#messages {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  background-color: #fff; /* White background for messages */
+  color: #000; /* Black text */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Videos */
+.videos {
+  display: flex; /* Arrange videos horizontally */
+  margin-top: 10px; /* Add spacing above */
+  width: 100%;
+}
+
+video {
+  flex: 1; /* Videos take up available space */
+  margin-right: 10px; /* Add spacing between videos */
+  border: 1px solid #ccc; /* Border for videos */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for videos */
+  border-radius: 4px;
+}
+
+video:last-child {
+  margin-right: 0; /* Remove right margin for last video */
+}
+
+/* Responsiveness (optional) */
+@media only screen and (max-width: 768px) {
+  /* Styles for smaller screens (e.g., mobile) */
+  .input-section {
+    flex-direction: column; /* Stack inputs and buttons on small screens */
+  }
+
+  .input-section input {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add spacing below input */
+  }
+
+  .videos {
+    flex-wrap: wrap; /* Wrap videos on small screens */
+  }
+
+  video {
+    margin-right: 0; /* Remove spacing between videos on small screens */
+    margin-bottom: 10px; /* Add spacing below video */
+  }
+}
